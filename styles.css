@@ -442,8 +442,22 @@ footer {
   .topics-grid, .speakers-grid, .contact-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  .nav-links { gap: 0.8rem; }
+  .topbar { flex-direction: column; text-align: center; justify-content: center; padding: 1rem; }
+  .site-nav ul { gap: 0.8rem; padding: 0.8rem 1rem; }
+  .hero-title { font-size: 3rem; }
+  .hero-copy { padding: 1.5rem; }
+  .content-card { padding: 1.5rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .header-countdown { display: none; }
   .committee-grid { grid-template-columns: repeat(2, 1fr); }
+  .sponsors-slider { gap: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .hero-title { font-size: 2.2rem; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .btn-primary, .btn-outline { width: 100%; }
+  .committee-grid { grid-template-columns: 1fr; }
+  .site-nav ul { justify-content: flex-start; }
+  .content-card { padding: 1.2rem; }
+  .reg-table { display: block; overflow-x: auto; white-space: nowrap; }
 }

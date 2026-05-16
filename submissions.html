@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIL'2026 - Submissions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --primary-dark: #0D1B2A;
+    --accent: #C0521E;
+    --accent-hover: #A34218;
+    --accent-warm: #D4924A;
+    --surface-light: #F7F4EF;
+    --surface-mid: #EDE8DF;
+    --text-primary: #0D1B2A;
+    --text-secondary: #5C5248;
+    --text-on-dark: #F7F4EF;
+    --border-ghost: rgba(196, 120, 55, 0.2);
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+
+  html { scroll-behavior: auto; }
+
+  body {
+    background: var(--surface-light);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.75;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-hover); }
+
+  .site-header {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--primary-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .topbar {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    padding: 1rem 2rem; gap: 1rem;
+  }
+  .brand { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; color: var(--accent-warm); }
+  .brand span { color: var(--accent); }
+  .header-countdown { display: flex; align-items: center; gap: 1rem; color: var(--text-on-dark); }
+  .header-countdown-title { font-weight: 700; font-size: 1rem; color: var(--text-on-dark); }
+  .cd-blocks { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+  .cd-block {
+    min-width: 76px; padding: 0.5rem 0.7rem; border-radius: 10px;
+    background: var(--primary-dark); border: 1px solid rgba(212,146,74,0.3);
+    text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(212,146,74,0.1);
+  }
+  .cd-value { display: block; font-family: var(--font-mono); font-weight: 700; font-size: 1.6rem; color: var(--accent); transform-origin: center bottom; }
+  .cd-label { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-warm); }
+  .cd-value.flip { animation: flipDigit 0.25s ease-out; }
+  .cd-value.pulse { animation: pulseDigit 0.3s ease-out; }
+
+  .site-nav { border-top: 1px solid rgba(255,255,255,0.08); background: var(--primary-dark); }
+  .site-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1.2rem; padding: 0.7rem 2rem; align-items: center; margin: 0; }
+  .site-nav a { font-size: 0.95rem; color: var(--text-on-dark); letter-spacing: 0.02em; position: relative; }
+  .site-nav a::after { content: ''; position: absolute; left: 0; bottom: -6px; width: 0; height: 1.5px; background: var(--accent); transition: width 0.2s ease; }
+  .site-nav a:hover::after { width: 100%; }
+  .nav-links { list-style: none; display: flex; flex-wrap: wrap; gap: 1.4rem; padding: 0.8rem 2rem; align-items: center; }
+  .nav-cta { background: var(--accent); color: #fff; padding: 0.45rem 0.95rem; border-radius: 6px; font-weight: 600; transition: background 0.2s; }
+  .nav-cta:hover { background: var(--accent-hover); }
+
+  section { padding: 3.8rem 0; position: relative; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .section-label { font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+  .section-title { font-family: var(--font-display); font-size: clamp(2rem, 3vw, 2.6rem); font-weight: 600; margin-bottom: 1rem; }
+
+  #submissions {
+    background: var(--surface-mid);
+    border-top: 1px solid var(--border-ghost); border-bottom: 1px solid var(--border-ghost);
+  }
+  #submissions .inner { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+
+  .tilt-card { transition: transform 0.18s ease, box-shadow 0.18s ease; will-change: transform; cursor: default; }
+
+  .sub-card {
+    background: #fff; border: 1px solid var(--border-ghost); border-radius: 10px;
+    padding: 1.6rem; box-shadow: 0 4px 22px rgba(13,27,42,0.08), 0 1px 4px rgba(13,27,42,0.04);
+  }
+  .sub-type { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-secondary); }
+  .sub-title { font-family: var(--font-display); font-size: 1.4rem; margin: 0.4rem 0 0.8rem; color: var(--text-primary); }
+  .sub-desc { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0.8rem; }
+  .sub-detail { font-size: 0.9rem; color: var(--text-secondary); padding: 0.4rem 0; border-top: 1px solid var(--border-ghost); }
+  .sub-detail strong { color: var(--accent); }
+  .sub-note {
+    background: var(--surface-light); border: 1px solid var(--border-ghost); border-radius: 10px;
+    padding: 1.2rem; grid-column: 1 / -1; display: flex; gap: 1rem;
+    box-shadow: 0 3px 14px rgba(13,27,42,0.06);
+  }
+  .sub-note h4 { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.4rem; }
+  .sub-note p { color: var(--text-secondary); font-size: 0.92rem; }
+
+  footer {
+    background: linear-gradient(135deg, var(--primary-dark), #132238);
+    color: var(--text-on-dark); padding: 2.5rem 0 1.5rem; margin-top: 2rem;
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 1.8rem; }
+  .footer-brand .brand { color: var(--accent-warm); display: block; margin-bottom: 0.6rem; }
+  .footer-brand p { font-size: 0.9rem; color: rgba(247,244,239,0.75); }
+  .footer-col h4 { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.8rem; color: var(--accent-warm); }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.5rem; }
+  .footer-col a { color: rgba(247,244,239,0.75); font-size: 0.88rem; }
+  .footer-col a:hover { color: var(--text-on-dark); }
+  .footer-bottom { border-top: 1px solid rgba(247,244,239,0.2); padding-top: 1rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: 0.85rem; }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-delay-1 { transition-delay: 0.12s; }
+  .reveal-delay-2 { transition-delay: 0.22s; }
+
+  @keyframes flipDigit { from { transform: rotateX(90deg); } to { transform: rotateX(0deg); } }
+  @keyframes pulseDigit {
+    0% { transform: scale(1); color: var(--accent); }
+    50% { transform: scale(1.15); color: var(--accent-warm); }
+    100% { transform: scale(1); color: var(--accent); }
+  }
+
+  @media (max-width: 900px) { #submissions .inner { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) { .nav-links { gap: 0.8rem; } .footer-grid { grid-template-columns: 1fr; } .header-countdown { display: none; } }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="topbar">
+    <div class="brand">SIL<span>'26</span></div>
+    <div class="header-countdown">
+      <span class="header-countdown-title">Conference begins in</span>
+      <div class="cd-blocks">
+        <div class="cd-block"><span class="cd-value" id="cd-days">--</span><span class="cd-label">Days</span></div>
+        <div class="cd-block"><span class="cd-value" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
+        <div class="cd-block"><span class="cd-value" id="cd-mins">--</span><span class="cd-label">Minutes</span></div>
+        <div class="cd-block"><span class="cd-value" id="cd-secs">--</span><span class="cd-label">Seconds</span></div>
+      </div>
+    </div>
+  </div>
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="topics.html">Topics</a></li>
+      <li><a href="dates.html">Dates</a></li>
+      <li><a href="submissions.html">Submissions</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="https://easychair.org" target="_blank" class="nav-cta">Submit Now</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="submissions">
+  <div class="container">
+    <p class="section-label reveal">Author Guidelines</p>
+    <h2 class="section-title reveal reveal-delay-1">Submission Options</h2>
+    <div class="inner">
+      <div class="sub-card tilt-card reveal">
+        <div class="sub-type">Option One</div>
+        <div class="sub-title">Full Paper</div>
+        <p class="sub-desc">Reviewed for presentation at the conference and publication in the official proceedings. Eligible for selection into special journal issues.</p>
+        <div class="sub-detail">Maximum length: <strong>10 pages</strong> (including references and appendix)</div>
+        <div class="sub-detail">Format: <strong>PDF only</strong></div>
+        <div class="sub-detail">Language: <strong>English</strong></div>
+        <div class="sub-detail">Published in: <strong>Springer Proceedings (DOI)</strong></div>
+      </div>
+      <div class="sub-card tilt-card reveal reveal-delay-1">
+        <div class="sub-type">Option Two</div>
+        <div class="sub-title">Abstract Only</div>
+        <p class="sub-desc">Reviewed for presentation at the conference. Included in the program schedule. Does not appear in the published proceedings.</p>
+        <div class="sub-detail">Length: <strong>200 to 300 words</strong></div>
+        <div class="sub-detail">Presentation: <strong>Conference only</strong></div>
+        <div class="sub-detail">Language: <strong>English</strong></div>
+        <div class="sub-detail">Registration: <strong>Same rate as full papers</strong></div>
+      </div>
+      <div class="sub-note tilt-card reveal reveal-delay-2">
+        <div class="sub-note-icon">ℹ</div>
+        <div>
+          <h4>Important Notice</h4>
+          <p>All submissions must be done through <strong>EasyChair</strong>. Authors must submit original work not under review elsewhere. Both submission types require at least one registered author by the early bird deadline. All accepted and presented full papers will be indexed in Springer with a dedicated DOI for the proceedings.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand">SIL<span>'26</span></span>
+        <p>The 9th International Conference on Industrial and Logistics Systems - October 19-21, 2026.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="topics.html">Topics</a></li>
+          <li><a href="dates.html">Dates</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Submissions</h4>
+        <ul>
+          <li><a href="https://easychair.org" target="_blank">EasyChair Portal</a></li>
+          <li><a href="submissions.html">Author Guidelines</a></li>
+          <li><a href="dates.html">Registration</a></li>
+          <li><a href="about.html">Contact Organizers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SIL Conference - 9th Edition. All rights reserved.</span>
+      <span>Published in partnership with <strong style="color:var(--accent-warm)">Springer</strong></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+let prevValues = { days: null, hours: null, mins: null, secs: null };
+const updateCountdown = () => {
+  const diff = new Date('2026-10-22T09:00:00') - new Date();
+  const daysEl = document.getElementById('cd-days');
+  if (!daysEl) return;
+  if (diff <= 0) { ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => document.getElementById(id).textContent = '00'); return; }
+  const next = {
+    days:  String(Math.floor(diff / 86400000)).padStart(2,'0'),
+    hours: String(Math.floor((diff % 86400000) / 3600000)).padStart(2,'0'),
+    mins:  String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0'),
+    secs:  String(Math.floor((diff % 60000) / 1000)).padStart(2,'0')
+  };
+  [['days','cd-days'],['hours','cd-hours'],['mins','cd-mins'],['secs','cd-secs']].forEach(([key, id]) => {
+    const el = document.getElementById(id);
+    if (prevValues[key] !== next[key]) { el.classList.remove('flip','pulse'); void el.offsetWidth; el.classList.add('flip','pulse'); el.textContent = next[key]; }
+  });
+  prevValues = next;
+};
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+const revealItems = document.querySelectorAll('.reveal');
+if (revealItems.length) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealItems.forEach(el => obs.observe(el));
+}
+
+document.querySelectorAll('.tilt-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    card.style.transform = `perspective(700px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(6px)`;
+    card.style.boxShadow = `${-x * 18}px ${y * 4 + 10}px 30px rgba(13,27,42,0.16), 0 2px 8px rgba(13,27,42,0.08)`;
+  });
+  card.addEventListener('mouseleave', () => { card.style.transform = ''; card.style.boxShadow = ''; });
+});
+</script>
+</body>
+</html>

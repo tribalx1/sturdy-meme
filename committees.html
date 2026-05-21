@@ -7,6 +7,97 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  .committee-section-title {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1B2D44 100%);
+    color: var(--text-on-dark);
+    padding: 0.9rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    box-shadow: 0 4px 16px rgba(13,27,42,0.18);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  /* ── GENERAL CHAIRS FLOATING SIDEBAR (ONLY ON DESKTOP) ── */
+  @media (min-width: 1200px) {
+    .content-section .container {
+      max-width: 1420px !important;
+      padding-right: 340px !important;
+      position: relative;
+    }
+
+    #general-chairs-wrapper {
+      position: fixed;
+      z-index: 100;
+      width: 300px;
+      left: calc(50vw + 370px);
+      background: var(--surface-light);
+      border: 1px solid var(--border-ghost);
+      border-radius: 16px;
+      padding: 1.2rem;
+      box-shadow: 0 12px 40px rgba(13, 27, 42, 0.18);
+    }
+
+    #general-chairs-wrapper .committee-section-title {
+      font-size: 1.1rem;
+      padding: 0.6rem 1rem;
+      margin-bottom: 0.8rem;
+      border-radius: 8px;
+    }
+
+    #general-chairs-wrapper .content-card {
+      padding: 0;
+      border: none;
+      background: transparent;
+      box-shadow: none;
+      margin-bottom: 0 !important;
+    }
+
+    #general-chairs-wrapper .content-card:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    #general-chairs-wrapper .committee-grid {
+      grid-template-columns: 1fr !important;
+      gap: 0.8rem;
+    }
+
+    #general-chairs-wrapper .member-card {
+      padding: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-align: left;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid rgba(13, 27, 42, 0.05);
+    }
+
+    #general-chairs-wrapper .member-avatar {
+      width: 48px;
+      height: 48px;
+      font-size: 1.1rem;
+      margin: 0;
+      flex-shrink: 0;
+    }
+
+    #general-chairs-wrapper .member-name {
+      font-size: 0.95rem;
+      margin-bottom: 0.1rem;
+    }
+
+    #general-chairs-wrapper .member-role {
+      font-size: 0.8rem;
+      line-height: 1.2;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -51,80 +142,344 @@
 <section class="content-section">
   <div class="container" style="padding-top:2.5rem; padding-bottom:2.5rem;">
 
-    <div class="content-card reveal" style="margin-bottom:2rem;">
-      <h3>🎓 General Chairs</h3>
-      <div class="committee-grid" style="margin-top:1.2rem;">
-        <div class="member-card">
-          <div class="member-avatar">AB</div>
-          <div class="member-name">Prof. Ahmed Benali</div>
-          <div class="member-role">Université Cadi Ayyad, Morocco</div>
-        </div>
-        <div class="member-card">
-          <div class="member-avatar">SK</div>
-          <div class="member-name">Prof. Sara Khalil</div>
-          <div class="member-role">ENSA El Jadida, Morocco</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="content-card reveal" style="margin-bottom:2rem;">
-      <h3>📋 Organizing Committee</h3>
-      <div class="committee-grid" style="margin-top:1.2rem;">
-        <div class="member-card">
-          <div class="member-avatar">ME</div>
-          <div class="member-name">Dr. Mohamed El Amrani</div>
-          <div class="member-role">Université Cadi Ayyad, Morocco</div>
-        </div>
-        <div class="member-card">
-          <div class="member-avatar">FZ</div>
-          <div class="member-name">Dr. Fatima Zahra Idrissi</div>
-          <div class="member-role">ENSA El Jadida, Morocco</div>
-        </div>
-        <div class="member-card">
-          <div class="member-avatar">YB</div>
-          <div class="member-name">Dr. Youssef Bouazza</div>
-          <div class="member-role">Université Cadi Ayyad, Morocco</div>
-        </div>
-        <div class="member-card">
-          <div class="member-avatar">LH</div>
-          <div class="member-name">Dr. Laila Haddaoui</div>
-          <div class="member-role">ENSA El Jadida, Morocco</div>
+    <!-- ═══ GENERAL CHAIRS ═══ -->
+    <div id="general-chairs-wrapper">
+      <div class="committee-section-title">🎓 General Chairs</div>
+      <div class="content-card reveal" style="margin-bottom:2.5rem;">
+        <div class="committee-grid" style="margin-top:0.5rem;">
+          <div class="member-card">
+            <div class="member-avatar">LH</div>
+            <div class="member-name">Pr. L. HAMMADI</div>
+            <div class="member-role">ENSA, UCD, El Jadida</div>
+          </div>
+          <div class="member-card">
+            <div class="member-avatar">RB</div>
+            <div class="member-name">Pr. R. BENMOUSSA</div>
+            <div class="member-role">ENSA, UCA, Marrakech</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="content-card reveal">
-      <h3>🔬 Scientific Committee</h3>
-      <div class="committee-grid" style="margin-top:1.2rem;">
+    <!-- ═══ HONORARY CHAIRS ═══ -->
+    <div class="committee-section-title">🏅 Honorary Chairs</div>
+    <div class="content-card reveal" style="margin-bottom:2.5rem;">
+      <div class="committee-grid" style="margin-top:0.5rem;">
         <div class="member-card">
-          <div class="member-avatar">KM</div>
-          <div class="member-name">Prof. Karim Mansouri</div>
-          <div class="member-role">ENSAM, Casablanca, Morocco</div>
+          <div class="member-avatar">AH</div>
+          <div class="member-name">Pr. A. HAJJAJI</div>
+          <div class="member-role">President of Chouaib Doukkali University</div>
         </div>
         <div class="member-card">
-          <div class="member-avatar">NR</div>
-          <div class="member-name">Prof. Nadia Raissi</div>
-          <div class="member-role">Université Mohammed V, Morocco</div>
+          <div class="member-avatar">BB</div>
+          <div class="member-name">Pr. B. BOUGADIR</div>
+          <div class="member-role">President of Cadi Ayyad University</div>
         </div>
         <div class="member-card">
-          <div class="member-avatar">OT</div>
-          <div class="member-name">Prof. Omar Tazi</div>
-          <div class="member-role">Université Hassan II, Morocco</div>
+          <div class="member-avatar">HA</div>
+          <div class="member-name">Pr. H. AYAD</div>
+          <div class="member-role">Director of ENSA Marrakech</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ ORGANIZING COMMITTEE ═══ -->
+    <div class="committee-section-title">📋 Organizing Committee</div>
+    <div class="content-card reveal" style="margin-bottom:2.5rem;">
+      <div class="committee-grid" style="margin-top:0.5rem;">
+        <div class="member-card">
+          <div class="member-avatar">TB</div>
+          <div class="member-name">Pr. T. BENAZZOUZ</div>
+          <div class="member-role">ENSA, UCA, Marrakech</div>
         </div>
         <div class="member-card">
-          <div class="member-avatar">HB</div>
-          <div class="member-name">Prof. Hicham Benbrahim</div>
-          <div class="member-role">ENSA Marrakech, Morocco</div>
+          <div class="member-avatar">AE</div>
+          <div class="member-name">Pr. A. EL BALLOUTI</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
         </div>
+        <div class="member-card">
+          <div class="member-avatar">CE</div>
+          <div class="member-name">Pr. C. ENNAWAOUI</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">KK</div>
+          <div class="member-name">Pr. K. KANDOUSSI</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">RE</div>
+          <div class="member-name">Pr. R. El-Otmani</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">EL</div>
+          <div class="member-name">Pr. E. LOUALID</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ LOCAL COMMITTEE ═══ -->
+    <div class="committee-section-title">📍 Local Committee</div>
+    <div class="content-card reveal" style="margin-bottom:2.5rem;">
+      <div class="committee-grid" style="margin-top:0.5rem;">
         <div class="member-card">
           <div class="member-avatar">RA</div>
-          <div class="member-name">Prof. Rachida Ait Maalem</div>
-          <div class="member-role">ENSA El Jadida, Morocco</div>
+          <div class="member-name">Rim Amachraf</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
         </div>
         <div class="member-card">
-          <div class="member-avatar">JD</div>
-          <div class="member-name">Prof. Jean Dupont</div>
-          <div class="member-role">Université de Lyon, France</div>
+          <div class="member-avatar">AZ</div>
+          <div class="member-name">Assiya ZAHID</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">BG</div>
+          <div class="member-name">BOUCHTAUI Ghita</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">HH</div>
+          <div class="member-name">HABOUBI Hind</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">NC</div>
+          <div class="member-name">Najoua Charhabil</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">AG</div>
+          <div class="member-name">Ali Rhaouti</div>
+          <div class="member-role">EMSI, UCA, Marrakech</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">RH</div>
+          <div class="member-name">Dr. RAILLANI Hajar</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">AK</div>
+          <div class="member-name">Dr. AIT MAMOUN Khadija</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ SCIENTIFIC COMMITTEE ═══ -->
+    <div class="committee-section-title">🔬 Scientific Committee</div>
+    <div class="content-card reveal">
+      <div class="committee-grid" style="margin-top:0.5rem;">
+        <div class="member-card">
+          <div class="member-avatar">LH</div>
+          <div class="member-name">Pr. L. HAMMADI</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">AE</div>
+          <div class="member-name">Pr. A. EL BALLOUTI</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">CE</div>
+          <div class="member-name">Pr. C. ENNAWAOUI</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">KK</div>
+          <div class="member-name">Pr. K. KANDOUSSI</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">RE</div>
+          <div class="member-name">Pr. R. El-Otmani</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">EL</div>
+          <div class="member-name">Pr. E. LOUALID</div>
+          <div class="member-role">ENSA, UCD, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">RB</div>
+          <div class="member-name">Pr. R. BENMOUSSA</div>
+          <div class="member-role">ENSA, UCA, Marrakech</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">TB</div>
+          <div class="member-name">Pr. T. BENAZZOUZ</div>
+          <div class="member-role">ENSA, UCA, Marrakech</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">SD</div>
+          <div class="member-name">Pr. S. DAHBI</div>
+          <div class="member-role">ENSA, UCA, Marrakech</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">AE</div>
+          <div class="member-name">Pr. Abdelwahed Echchatbi</div>
+          <div class="member-role">FST, University Hassan Premier, Settat</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">AC</div>
+          <div class="member-name">Pr. Abdelkabir Cherkaoui</div>
+          <div class="member-role">FST, University Hassan Premier, Settat</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">CM</div>
+          <div class="member-name">Pr. Charif Mabrouki</div>
+          <div class="member-role">FST, University Hassan Premier, Settat</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">FB</div>
+          <div class="member-name">Pr. Fatima Bouyahya</div>
+          <div class="member-role">ENSA, Cadi Ayyad University, Marrakech</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">BA</div>
+          <div class="member-name">Dr. Badria Aggoug</div>
+          <div class="member-role">The Moroccan Society of Emergency Medicine (SMMU)</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">SJ</div>
+          <div class="member-name">Pr. Said Jidane</div>
+          <div class="member-role">Mohammed V Military Hospital, Faculty of Medicine &amp; Pharmacy, Mohammed V University, Rabat</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">LB</div>
+          <div class="member-name">Pr. Lahcen Belyamani</div>
+          <div class="member-role">Mohammed V Military Hospital, Faculty of Medicine &amp; Pharmacy, Mohammed V University, Rabat</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">BN</div>
+          <div class="member-name">Pr. Babacar M. Ndiaye</div>
+          <div class="member-role">University of Cheikh Anta Diop, Dakar, Senegal</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">RD</div>
+          <div class="member-name">Pr. Rida Darouich</div>
+          <div class="member-role">EM Strasbourg Business School, Strasbourg, France</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">ES</div>
+          <div class="member-name">Pr. Eduardo Souza de Cursi</div>
+          <div class="member-role">INSA Rouen, Normandie, France</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">VB</div>
+          <div class="member-name">Pr. Vlad Barbu</div>
+          <div class="member-role">Normandie University, Rouen, France</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">MS</div>
+          <div class="member-name">Pr. Marcia M. Altimari Samed</div>
+          <div class="member-role">National University of Maringá, Brazil</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">NN</div>
+          <div class="member-name">Pr. Nikitakos Nikitas</div>
+          <div class="member-role">University of the Aegean, Greece</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">MY</div>
+          <div class="member-name">Pr. Madiha Yessari</div>
+          <div class="member-role">ENSAJ, Chouaïb Doukkali University, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">ML</div>
+          <div class="member-name">Pr. Mohamed Louzazni</div>
+          <div class="member-role">ENSAJ, Chouaïb Doukkali University, El Jadida</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">AT</div>
+          <div class="member-name">Pr. Ahmed Tchvagha Zeine</div>
+          <div class="member-role">FSJE, Nouakchott University, Mauritania</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">AC</div>
+          <div class="member-name">Pr. Anas Cherrafi</div>
+          <div class="member-role">Cadi Ayyad University, Marrakech</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">MZ</div>
+          <div class="member-name">Pr. M. ZEMZAMI</div>
+          <div class="member-role">ENAM, UM5, Rabat</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">AA</div>
+          <div class="member-name">Pr. Abouelkalam Anas</div>
+          <div class="member-role">ENSA Marrakech, UCA</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">AA</div>
+          <div class="member-name">Pr. Aloui Adel</div>
+          <div class="member-role">Istec Business School Paris</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">BF</div>
+          <div class="member-name">Pr. Behrendt Fabian</div>
+          <div class="member-role">Magdeburg-Stendal University of Applied Sciences, Germany</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">BA</div>
+          <div class="member-name">Pr. Benghabrit Asmaa</div>
+          <div class="member-role">ENSMR, UM5</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">ES</div>
+          <div class="member-name">Pr. Elfizazi Said</div>
+          <div class="member-role">EST Safi, UCA</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">EF</div>
+          <div class="member-name">Pr. El Harouni Fatine</div>
+          <div class="member-role">ENSA Marrakech, UCA</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">EA</div>
+          <div class="member-name">Pr. Elmhamedi Abderrahman</div>
+          <div class="member-role">IUT, Université Paris 8</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">HK</div>
+          <div class="member-name">Pr. Hadj-Hamou Khaled</div>
+          <div class="member-role">INSA Lyon</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">JF</div>
+          <div class="member-name">Pr. Jawab Fouad</div>
+          <div class="member-role">EST Fez, USMBA</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">MA</div>
+          <div class="member-name">Pr. Mousrij Ahmed</div>
+          <div class="member-role">FST Settat, UHP</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">RF</div>
+          <div class="member-name">Pr. Riane Fouad</div>
+          <div class="member-role">Ecole Centrale Casablanca (ECC)</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">ZM</div>
+          <div class="member-name">Pr. Zrikem Maria</div>
+          <div class="member-role">ENSA Marrakech, UCA</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">RC</div>
+          <div class="member-name">Pr. Roberta Costa Affonso</div>
+          <div class="member-role">ISAE-Supméca - Institut supérieur de mécanique de Paris</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">LP</div>
+          <div class="member-name">Pr. LECLAIRE Patrice</div>
+          <div class="member-role">ISAE-Supméca - Institut supérieur de mécanique de Paris</div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">AK</div>
+          <div class="member-name">Pr. Anna Maria Kotrikla</div>
+          <div class="member-role">University of the Aegean</div>
         </div>
       </div>
     </div>
@@ -167,5 +522,26 @@
 </footer>
 
 <script src="main.js"></script>
+<script>
+  const wrapper = document.getElementById('general-chairs-wrapper');
+  const header = document.querySelector('.site-header');
+
+  function positionGeneralChairs() {
+    if (!wrapper || !header) return;
+
+    if (window.innerWidth >= 1200) {
+      const headerHeight = header.offsetHeight;
+      wrapper.style.top = (headerHeight + 20) + 'px';
+    } else {
+      wrapper.style.top = 'auto';
+    }
+  }
+
+  // Position general chairs dynamically
+  positionGeneralChairs();
+  document.addEventListener('DOMContentLoaded', positionGeneralChairs);
+  window.addEventListener('load', positionGeneralChairs);
+  window.addEventListener('resize', positionGeneralChairs);
+</script>
 </body>
 </html>

@@ -11,9 +11,9 @@
   --text-secondary: #5C5248;
   --text-on-dark: #F7F4EF;
   --border-ghost: rgba(196, 120, 55, 0.2);
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'Space Mono', monospace;
+  --font-display: 'Times New Roman', Times, Baskerville, Georgia, serif;
+  --font-body: 'Times New Roman', Times, Baskerville, Georgia, serif;
+  --font-mono: 'Times New Roman', Times, Baskerville, Georgia, serif;
 }
 
 html { scroll-behavior: smooth; }

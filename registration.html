@@ -1,197 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIL'2026 - Registration</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIL'2026 - Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="topbar">
-    <div class="brand">SIL<span>'26</span></div>
-    <div class="header-countdown">
-      <span class="header-countdown-title">Conference begins in</span>
-      <div class="cd-blocks">
-        <div class="cd-block"><span class="cd-value" id="cd-days">--</span><span class="cd-label">Days</span></div>
-        <div class="cd-block"><span class="cd-value" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
-        <div class="cd-block"><span class="cd-value" id="cd-mins">--</span><span class="cd-label">Minutes</span></div>
-        <div class="cd-block"><span class="cd-value" id="cd-secs">--</span><span class="cd-label">Seconds</span></div>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="brand">SIL<span>'26</span></div>
+      <div class="header-countdown">
+        <span class="header-countdown-title">Conference begins in</span>
+        <div class="cd-blocks">
+          <div class="cd-block"><span class="cd-value" id="cd-days">--</span><span class="cd-label">Days</span></div>
+          <div class="cd-block"><span class="cd-value" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
+          <div class="cd-block"><span class="cd-value" id="cd-mins">--</span><span class="cd-label">Minutes</span></div>
+          <div class="cd-block"><span class="cd-value" id="cd-secs">--</span><span class="cd-label">Seconds</span></div>
+        </div>
       </div>
     </div>
-  </div>
-  <nav class="site-nav" aria-label="Main navigation">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="call-for-paper.html">Call for Paper</a></li>
-      <li><a href="topics.html">Topics</a></li>
-      <li><a href="dates.html">Dates</a></li>
-      <li><a href="committees.html">Committees</a></li>
-      <li><a href="keynote-speakers.html">Keynote Speakers</a></li>
-      <li><a href="registration.html" class="nav-active">Registration</a></li>
-      <li><a href="poster.html">Poster Presentation</a></li>
-      <li><a href="venue.html">Venue</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="program.html">Program</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="call-for-paper.html">Call for Paper</a></li>
+        <li><a href="topics.html">Topics</a></li>
+        <li><a href="dates.html">Dates</a></li>
+        <li><a href="committees.html">Committees</a></li>
+        <li><a href="keynote-speakers.html">Keynote Speakers</a></li>
+        <li><a href="registration.html" class="nav-active">Registration</a></li>
+        <li><a href="poster.html">Poster Presentation</a></li>
+        <li><a href="venue.html">Venue</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="program.html">Program</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="page-hero">
-  <div class="container">
-    <p class="section-label">SIL'2026</p>
-    <h1 class="section-title">Registration</h1>
-    <p class="page-subtitle">Conference registration rates for all attendees</p>
-  </div>
-</section>
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">SIL'2026</p>
+      <h1 class="section-title">Registration</h1>
+      <p class="page-subtitle">Conference registration rates for all attendees</p>
+    </div>
+  </section>
 
-<section class="content-section">
-  <div class="container" style="padding-top:2.5rem; padding-bottom:2.5rem;">
-    
-    <!-- ═══ REGISTRATION ═══ -->
-    <div class="content-card reveal" style="margin-bottom: 2rem;">
-      <h3>💳 Registration</h3>
-      <p style="margin-top: 1rem; line-height: 1.6; color: var(--text-secondary);">
-        Registration for the conference include access to the scientific program, conference material, coffee, and lunches according to the program.
-      </p>
-      
-      <table class="reg-table" style="margin-top:1.5rem; width: 100%;">
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>
-              <s style="color: #e74c3c;">Before September 10, 2026</s><br>
-              Before October 02, 2026
-            </th>
-            <th>
-              <s style="color: #e74c3c;">After September 10, 2026</s><br>
-              After October 02, 2026
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="font-weight: 600;">Academic</td>
-            <td><span class="fee-amount">1000 MAD</span></td>
-            <td><span class="fee-amount">1500 MAD</span></td>
-          </tr>
-          <tr>
-            <td style="font-weight: 600;">PhD Student</td>
-            <td><span class="fee-amount">750 MAD</span></td>
-            <td><span class="fee-amount">1000 MAD</span></td>
-          </tr>
-          <tr>
-            <td style="font-weight: 600;">Listener</td>
-            <td><span class="fee-amount">350 MAD</span></td>
-            <td><span class="fee-amount">500 MAD</span></td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <div style="margin-top: 1.5rem; line-height: 1.6; font-size: 0.95rem; color: var(--text-secondary);">
-        <ul style="padding-left: 1.2rem; margin-bottom: 1rem;">
-          <li style="margin-bottom: 0.4rem;">All bank charges have to be paid in addition to the registration.</li>
-          <li style="margin-bottom: 0.4rem;">&ldquo;Bon de commande&rdquo; are not accepted.</li>
-          <li style="margin-bottom: 0.4rem;">The registration do not cover the cost of accommodation, which must be borne by the participant.</li>
-        </ul>
-        <p style="font-style: italic; font-weight: 600; color: var(--accent); margin-top: 0.8rem;">
-          * For student fees, a scanned copy of your student ID will be requested.
+  <section class="content-section">
+    <div class="container" style="padding-top:2.5rem; padding-bottom:2.5rem;">
+
+      <!-- ═══ REGISTRATION FEES ═══ -->
+      <div class="content-card reveal" style="margin-bottom: 2rem;">
+        <h3><i class="fa-solid fa-credit-card" style="color: var(--accent); margin-right: 0.4rem;"></i> Registration
+          Fees</h3>
+        <p style="margin-top: 1rem; line-height: 1.6; color: var(--text-secondary);">
+          Registration for the conference includes access to the scientific program, conference material, coffee, and
+          lunches according to the program.
         </p>
-      </div>
-    </div>
 
-    <!-- ═══ CONFERENCE REGISTRATION & PAYMENT ═══ -->
-    <div class="content-card reveal">
-      <h3>🏦 Conference Registration & Payment</h3>
-      <p style="margin-top: 1rem; line-height: 1.6; color: var(--text-secondary);">
-        Registration is required for all <strong>participants of SIL'26</strong>. You need to transfer your registration to the account below:
-      </p>
-      
-      <div style="margin-top: 1.5rem; padding: 1.5rem; background: var(--surface-mid); border-radius: 12px; border-left: 4px solid var(--accent);">
-        <h4 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--primary-dark); font-weight: 700;">Bank Account Details</h4>
-        
-        <div style="overflow-x: auto;">
-          <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
-            <tbody>
-              <tr style="border-bottom: 1px solid rgba(13,27,42,0.08);">
-                <td style="padding: 0.6rem 0; font-weight: 600; width: 220px; color: var(--text-secondary); white-space: nowrap;">Bank Name:</td>
-                <td style="padding: 0.6rem 0; font-weight: 700; color: var(--text-primary);">Cr&eacute;dit Agricole du Maroc</td>
-              </tr>
-              <tr style="border-bottom: 1px solid rgba(13,27,42,0.08);">
-                <td style="padding: 0.6rem 0; font-weight: 600; color: var(--text-secondary); white-space: nowrap;">Beneficiary Account Name:</td>
-                <td style="padding: 0.6rem 0; font-weight: 700; color: var(--text-primary); line-height: 1.4;">Soci&eacute;t&eacute; Marocaine de Mat&eacute;riaux, M&eacute;canique, Energie (S3ME)</td>
-              </tr>
-              <tr style="border-bottom: 1px solid rgba(13,27,42,0.08);">
-                <td style="padding: 0.6rem 0; font-weight: 600; color: var(--text-secondary); white-space: nowrap;">IBAN:</td>
-                <td style="padding: 0.6rem 0; font-weight: 700; font-family: var(--font-mono); color: var(--accent); letter-spacing: 0.5px; word-break: break-all;">225170064602074651010435</td>
+        <div style="margin-top: 1.5rem; overflow-x: auto;">
+          <table
+            style="width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(13,27,42,0.08); font-size: 0.95rem;">
+            <thead>
+              <tr>
+                <th rowspan="2"
+                  style="background: linear-gradient(135deg, #0D1B2A 0%, #1B2D44 100%); color: #fff; padding: 1rem 1.2rem; text-align: left; font-weight: 700; font-size: 0.95rem; vertical-align: middle; width: 130px; border-right: 1px solid rgba(255,255,255,0.15);">
+                  Category
+                </th>
+                <th colspan="2"
+                  style="background: linear-gradient(135deg, #0D1B2A 0%, #1B2D44 100%); color: #fff; padding: 0.8rem 1rem; text-align: center; font-weight: 600; font-size: 0.85rem; border-right: 2px solid rgba(255,255,255,0.2); line-height: 1.5;">
+                  <span style="text-decoration: line-through; opacity: 0.5; font-size: 0.8rem;">Until
+                    10/09/2026</span><br>
+                  <i class="fa-solid fa-clock" style="margin-right: 0.3rem;"></i> Early Bird &ndash; Until 02/10/2026
+                </th>
+                <th colspan="2"
+                  style="background: linear-gradient(135deg, #0D1B2A 0%, #1B2D44 100%); color: #fff; padding: 0.8rem 1rem; text-align: center; font-weight: 600; font-size: 0.85rem; line-height: 1.5;">
+                  <span style="text-decoration: line-through; opacity: 0.5; font-size: 0.8rem;">After
+                    10/09/2026</span><br>
+                  <i class="fa-solid fa-calendar-check" style="margin-right: 0.3rem;"></i> After 02/10/2026
+                </th>
               </tr>
               <tr>
-                <td style="padding: 0.6rem 0; font-weight: 600; color: var(--text-secondary); white-space: nowrap;">Code SWIFT:</td>
-                <td style="padding: 0.6rem 0; font-weight: 700; font-family: var(--font-mono); color: var(--text-primary);">CNCAMAMR</td>
+                <th
+                  style="background: var(--surface-mid); color: var(--primary-dark); padding: 0.7rem 0.8rem; text-align: center; font-weight: 600; font-size: 0.82rem; border-right: 1px solid rgba(13,27,42,0.08); border-bottom: 1px solid rgba(13,27,42,0.08);">
+                  <i class="fa-solid fa-user-tie" style="margin-right: 0.3rem;"></i>Academic /<br>Professional</th>
+                <th
+                  style="background: var(--surface-mid); color: var(--primary-dark); padding: 0.7rem 0.8rem; text-align: center; font-weight: 600; font-size: 0.82rem; border-right: 2px solid rgba(13,27,42,0.1); border-bottom: 1px solid rgba(13,27,42,0.08);">
+                  <i class="fa-solid fa-graduation-cap" style="margin-right: 0.3rem;"></i>PhD Student</th>
+                <th
+                  style="background: var(--surface-mid); color: var(--primary-dark); padding: 0.7rem 0.8rem; text-align: center; font-weight: 600; font-size: 0.82rem; border-right: 1px solid rgba(13,27,42,0.08); border-bottom: 1px solid rgba(13,27,42,0.08);">
+                  <i class="fa-solid fa-user-tie" style="margin-right: 0.3rem;"></i>Academic /<br>Professional</th>
+                <th
+                  style="background: var(--surface-mid); color: var(--primary-dark); padding: 0.7rem 0.8rem; text-align: center; font-weight: 600; font-size: 0.82rem; border-bottom: 1px solid rgba(13,27,42,0.08);">
+                  <i class="fa-solid fa-graduation-cap" style="margin-right: 0.3rem;"></i>PhD Student</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  style="padding: 1rem 1.2rem; font-weight: 700; color: var(--primary-dark); background: #f8f9fa; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                  <i class="fa-solid fa-flag" style="color: var(--accent); margin-right: 0.4rem;"></i> Moroccan
+                </td>
+                <td
+                  style="padding: 1rem 0.8rem; text-align: center; background: #fff; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                  <span
+                    style="background: var(--primary-dark); color: #fff; padding: 0.35rem 0.9rem; border-radius: 20px; font-weight: 700; font-size: 0.95rem; display: inline-block;">1500
+                    Dh</span>
+                </td>
+                <td
+                  style="padding: 1rem 0.8rem; text-align: center; background: #fff; border-right: 2px solid #eee; border-bottom: 1px solid #eee;">
+                  <span
+                    style="background: var(--primary-dark); color: #fff; padding: 0.35rem 0.9rem; border-radius: 20px; font-weight: 700; font-size: 0.95rem; display: inline-block;">750
+                    Dh</span>
+                </td>
+                <td
+                  style="padding: 1rem 0.8rem; text-align: center; background: #fff; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                  <span
+                    style="background: var(--primary-dark); color: #fff; padding: 0.35rem 0.9rem; border-radius: 20px; font-weight: 700; font-size: 0.95rem; display: inline-block;">2000
+                    Dh</span>
+                </td>
+                <td style="padding: 1rem 0.8rem; text-align: center; background: #fff; border-bottom: 1px solid #eee;">
+                  <span
+                    style="background: var(--primary-dark); color: #fff; padding: 0.35rem 0.9rem; border-radius: 20px; font-weight: 700; font-size: 0.95rem; display: inline-block;">1000
+                    Dh</span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="padding: 1rem 1.2rem; font-weight: 700; color: var(--primary-dark); background: #f8f9fa; border-right: 1px solid #eee;">
+                  <i class="fa-solid fa-globe" style="color: var(--accent); margin-right: 0.4rem;"></i> Others
+                </td>
+                <td style="padding: 1rem 0.8rem; text-align: center; background: #fff; border-right: 1px solid #eee;">
+                  <span
+                    style="background: var(--primary-dark); color: #fff; padding: 0.35rem 0.9rem; border-radius: 20px; font-weight: 700; font-size: 0.95rem; display: inline-block;">300
+                    &euro;</span>
+                </td>
+                <td style="padding: 1rem 0.8rem; text-align: center; background: #fff; border-right: 2px solid #eee;">
+                  <span
+                    style="background: var(--primary-dark); color: #fff; padding: 0.35rem 0.9rem; border-radius: 20px; font-weight: 700; font-size: 0.95rem; display: inline-block;">200
+                    &euro;</span>
+                </td>
+                <td style="padding: 1rem 0.8rem; text-align: center; background: #fff; border-right: 1px solid #eee;">
+                  <span
+                    style="background: var(--primary-dark); color: #fff; padding: 0.35rem 0.9rem; border-radius: 20px; font-weight: 700; font-size: 0.95rem; display: inline-block;">400
+                    &euro;</span>
+                </td>
+                <td style="padding: 1rem 0.8rem; text-align: center; background: #fff;">
+                  <span
+                    style="background: var(--primary-dark); color: #fff; padding: 0.35rem 0.9rem; border-radius: 20px; font-weight: 700; font-size: 0.95rem; display: inline-block;">300
+                    &euro;</span>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
+
+        <!-- Gala Dinner -->
+        <div
+          style="margin-top: 1.5rem; padding: 1rem 1.5rem; background: var(--surface-mid); border-radius: 10px; border-left: 4px solid var(--accent-warm);">
+          <p style="font-weight: 700; font-size: 1.05rem; color: var(--primary-dark); margin-bottom: 0.3rem;"><i
+              class="fa-solid fa-utensils" style="color: var(--accent); margin-right: 0.4rem;"></i> Gala Dinner / Social
+            Program</p>
+          <p style="font-size: 1rem; color: var(--text-secondary);"><span class="fee-amount">50&euro;</span> / <span
+              class="fee-amount">500 Dh</span></p>
+        </div>
+
+        <div style="margin-top: 1.5rem; line-height: 1.6; font-size: 0.95rem; color: var(--text-secondary);">
+          <ul style="padding-left: 1.2rem; margin-bottom: 1rem;">
+            <li style="margin-bottom: 0.4rem;">All bank charges have to be paid in addition to the registration.</li>
+            <li style="margin-bottom: 0.4rem;">The registration does not cover the cost of accommodation, which must be
+              borne by the participant.</li>
+          </ul>
+          <p style="font-style: italic; font-weight: 600; color: var(--accent); margin-top: 0.8rem;">
+            * For student fees, a scanned copy of your student ID will be requested.
+          </p>
+        </div>
       </div>
 
-      <p style="margin-top: 1.2rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">
-        <strong>Important Transfer Info:</strong> Please include <strong style="color: var(--accent-warm);">SIL Conference</strong> and the <strong style="color: var(--accent-warm);">participant's name</strong> in the bank transfer reference.
-      </p>
+      <!-- ═══ PAYMENT ═══ -->
+      <div class="content-card reveal" style="margin-bottom: 2rem;">
+        <h3><i class="fa-solid fa-building-columns" style="color: var(--accent); margin-right: 0.4rem;"></i> Payment
+        </h3>
+        <p style="margin-top: 1rem; line-height: 1.6; color: var(--text-secondary);">
+          Bank transfer to the account of:
+        </p>
 
-      <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--border-ghost);">
+        <div
+          style="margin-top: 1.5rem; padding: 1.5rem; background: var(--surface-mid); border-radius: 12px; border-left: 4px solid var(--accent);">
+          <h4 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--primary-dark); font-weight: 700;">Bank Account
+            Details</h4>
 
-      <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem; font-weight: 700;">📝 Registration Form</h4>
-      <p style="margin-bottom: 1.5rem; line-height: 1.6; color: var(--text-secondary);">
-        After your payment, you need to fill out this form and upload the payment proof:
-      </p>
-      
-      <div style="text-align: center;">
-        <a href="https://forms.gle/bfQGeL698p8mBQ7m6" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.85rem 2.2rem; font-size: 1.05rem;">
-          📋 Go to Registration Form
-        </a>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+              <tbody>
+                <tr style="border-bottom: 1px solid rgba(13,27,42,0.08);">
+                  <td
+                    style="padding: 0.6rem 0; font-weight: 600; width: 220px; color: var(--text-secondary); white-space: nowrap;">
+                    Beneficiary:</td>
+                  <td style="padding: 0.6rem 0; font-weight: 700; color: var(--text-primary); line-height: 1.4;">ASS.
+                    Marocaine de l'Innovation (AMINOV)<br><span
+                      style="font-weight: 400; font-size: 0.9rem; color: var(--text-secondary);">ENSA Marrakech, Av.
+                      Abdelkarim Khattabi, BP 575, CP 40000, Marrakech, Maroc</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(13,27,42,0.08);">
+                  <td style="padding: 0.6rem 0; font-weight: 600; color: var(--text-secondary); white-space: nowrap;">
+                    Bank:</td>
+                  <td style="padding: 0.6rem 0; font-weight: 700; color: var(--text-primary);">Banque Populaire</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(13,27,42,0.08);">
+                  <td style="padding: 0.6rem 0; font-weight: 600; color: var(--text-secondary); white-space: nowrap;">
+                    Agency:</td>
+                  <td style="padding: 0.6rem 0; font-weight: 700; color: var(--text-primary);">Agence BP Tensift, Avenue
+                    Abdelkrim Khattabi, Marrakech, Maroc</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(13,27,42,0.08);">
+                  <td style="padding: 0.6rem 0; font-weight: 600; color: var(--text-secondary); white-space: nowrap;">
+                    RIB:</td>
+                  <td
+                    style="padding: 0.6rem 0; font-weight: 700; font-family: var(--font-mono); color: var(--accent); letter-spacing: 0.5px; word-break: break-all;">
+                    145450211168868321000368</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(13,27,42,0.08);">
+                  <td style="padding: 0.6rem 0; font-weight: 600; color: var(--text-secondary); white-space: nowrap;">
+                    SWIFT Code:</td>
+                  <td
+                    style="padding: 0.6rem 0; font-weight: 700; font-family: var(--font-mono); color: var(--text-primary);">
+                    BCPOMAMC</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0.6rem 0; font-weight: 600; color: var(--text-secondary); white-space: nowrap;">
+                    IBAN:</td>
+                  <td
+                    style="padding: 0.6rem 0; font-weight: 700; font-family: var(--font-mono); color: var(--accent); letter-spacing: 0.5px; word-break: break-all;">
+                    MA145450211168868321000368</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div
+          style="margin-top: 1.5rem; padding: 1rem 1.5rem; background: rgba(231, 76, 60, 0.06); border-radius: 10px; border-left: 4px solid #e74c3c;">
+          <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+            <strong>NB:</strong> Please join to the registration form the <strong>proof of payment</strong> and the
+            <strong>proof of your student status</strong> (if you are a PhD Student).
+          </p>
+        </div>
+      </div>
+
+      <!-- ═══ REGISTRATION FORM ═══ -->
+      <div class="content-card reveal">
+        <h3><i class="fa-solid fa-file-lines" style="color: var(--accent); margin-right: 0.4rem;"></i> Registration Form
+        </h3>
+        <p style="margin-top: 1rem; margin-bottom: 1.5rem; line-height: 1.6; color: var(--text-secondary);">
+          After your payment, please download, fill out the registration form below, and send it along with the proof of
+          payment to the email addresses indicated.
+        </p>
+
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <a href="SIL’26 Registration Form (1) (1).docx" download class="btn-primary"
+            style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.85rem 2.2rem; font-size: 1.05rem;">
+            <i class="fa-solid fa-download"></i> Download Registration Form (.docx)
+          </a>
+        </div>
+
+        <div
+          style="padding: 1rem 1.5rem; background: var(--surface-mid); border-radius: 10px; border-left: 4px solid var(--accent);">
+          <p style="font-weight: 700; font-size: 1rem; color: var(--primary-dark); margin-bottom: 0.5rem;"><i
+              class="fa-solid fa-envelope" style="color: var(--accent); margin-right: 0.4rem;"></i> Send your form and
+            payment proof to:</p>
+          <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.8;">
+            <a href="mailto:assaminov@gmail.com"
+              style="color: var(--accent); font-weight: 600;">assaminov@gmail.com</a><br>
+            <a href="mailto:saffidineoumaima@gmail.com"
+              style="color: var(--accent); font-weight: 600;">saffidineoumaima@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand">SIL<span>'26</span></span>
+          <p>The 9th International Conference on Industrial and Logistics Systems - October 19-21, 2026.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="call-for-paper.html">Call for Paper</a></li>
+            <li><a href="topics.html">Topics</a></li>
+            <li><a href="dates.html">Dates</a></li>
+            <li><a href="registration.html">Registration</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="committees.html">Committees</a></li>
+            <li><a href="keynote-speakers.html">Keynote Speakers</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SIL Conference - 9th Edition. All rights reserved.</span>
+        <span>Published in partnership with <strong style="color:var(--accent-warm)">Springer</strong></span>
       </div>
     </div>
+  </footer>
 
-  </div>
-</section>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="brand">SIL<span>'26</span></span>
-        <p>The 9th International Conference on Industrial and Logistics Systems - October 19-21, 2026.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="call-for-paper.html">Call for Paper</a></li>
-          <li><a href="topics.html">Topics</a></li>
-          <li><a href="dates.html">Dates</a></li>
-          <li><a href="registration.html">Registration</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>More</h4>
-        <ul>
-          <li><a href="committees.html">Committees</a></li>
-          <li><a href="keynote-speakers.html">Keynote Speakers</a></li>
-          <li><a href="program.html">Program</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 SIL Conference - 9th Edition. All rights reserved.</span>
-      <span>Published in partnership with <strong style="color:var(--accent-warm)">Springer</strong></span>
-    </div>
-  </div>
-</footer>
-
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
